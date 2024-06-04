@@ -9332,3 +9332,214 @@ INSERT INTO neighborhoods_20ts24tu (id, district_id, title) VALUES
 (10983, 153, 'Marxamat MFY'),
 (10984, 153, 'Yangi turmush MFY'),
 (10985, 153, 'Toshkent MFY');
+
+
+INSERT INTO public.blogs_category_20ts24tu(
+	id, title, status_id)
+	VALUES (1,'category1', 1),	
+	 (2,'category2', 1);
+
+
+INSERT INTO public.blogs_category_translations_20ts24tu(
+	id,title, status_translation_id, language_id, blog_category_id)
+	VALUES (1,'categorytren1', 1, 1, 1),
+	 (2,'categorytren2', 1, 1, 2),
+	 (3,'categorytrru1', 3, 2, 1),
+	 (4,'categorytrru2', 3, 2, 2);
+
+     INSERT INTO public.blogs_20ts24tu(
+	id, title_short, title, description, text, status_id, 
+	blog_category_id, "position", favorite, user_id)
+	VALUES (1, 'title short1', 'title1', 'desc1', 'text1', 1, 1, 1, true, 1),
+	(2, 'title short2', 'title2', 'desc2', 'text2', 1, 2, 1, true, 1);
+
+    INSERT INTO public.blogs_translations_20ts24tu(
+	id, title_short, title, description, text, 
+	status_translation_id,
+	blog_category_translation_id, "position", favorite, blog_id, language_id, user_id)
+	VALUES (1,'title_short1', 'title1', 'description1', 'text1', 
+	1, 1, 1, true, 1, 1, 1),
+	(2,'title_short2', 'title2', 'description2', 'text2', 
+	3, 1, 1, true, 1, 2, 1);
+
+    INSERT INTO public.departament_types_translations_20ts24tu(
+	id, type, language_id, status_translation_id, departament_type_id)
+	VALUES (1, 'Rectoren', 1, 1, 1),
+	(2, 'Rectorru', 2, 3, 1);
+	
+    INSERT INTO public.departament_translations_20ts24tu(
+	id, title_short, title, description, text, 
+	parent_id, language_id, status_translation_id,
+	"position", favorite,
+	departament_type_translation_id, departament_id)
+	VALUES (1,  'title_shorten', 'titleen', 'description', 'text', 
+	0, 1, 1, 1, true,
+	1, 1),
+	(2,  'title_shortru', 'titleru', 'description', 'text', 
+	0, 2, 3, 1, true,
+	1, 1);
+
+    INSERT INTO public.departament_details_20ts24tu(
+	id, text_json, departament_id, status_id)
+	VALUES (1, 'dep detail1', 1, 1);
+
+    INSERT INTO public.departament_details_translations_20ts24tu(
+	id, text_json, language_id, departament_translation_id, 
+	departament_detail_id, status_translation_id)
+	VALUES (1, 'textjson 1 en', 1, 1, 1, 1),	
+	(2, 'textjson 1 ru', 2, 1, 1, 3);
+
+    INSERT INTO public.employments_translations_20ts24tu(
+	id, title, employment_id, language_id, status_translation_id)
+	VALUES (6, 'titleru', 1, 2, 3);
+
+    INSERT INTO public.employee_types_20ts24tu(
+	id, title, status_id)
+	VALUES (1, 'Oqituvchi', 1);
+
+    INSERT INTO public.employee_types_translations_20ts24tu(
+	id, title, employee_id, language_id, status_translation_id)
+	VALUES (1, 'titlten', 1, 1, 1),
+	(2, 'titltru', 1, 2, 3);
+
+    INSERT INTO public.genders_translations_20ts24tu(
+	id, gender, gender_id, language_id, status_translation_id)
+	VALUES (1, 'Male en', 1, 1, 1),
+	(2, 'FeMale en', 2, 1, 1),
+	(3, 'Male ru', 1, 2, 3),
+	(4, 'FeMale ru', 2, 2, 3);
+
+    INSERT INTO public.menu_types_translations_20ts24tu(
+	id, title, menu_type_id, status_translation_id, language_id)
+	VALUES (1, 'titleen', 1, 1, 1),
+	(2, 'titleru', 1, 3, 2);
+
+    INSERT INTO public.menu_20ts24tu(
+	id, parent_id, "position", high_menu, menu_type_id,
+	title, description,
+	link_, top_menu, departament_id, status_id, user_id)
+	VALUES (1, 0, 1, 1, 1,
+	'title', 'description', 
+	'link_', true, 1, 1, 1);
+
+    INSERT INTO public.menu_translations_20ts24tu(
+	id, menu_id, parent_id, "position", 
+	high_menu, menu_type_translation_id, title, 
+	description, 
+	link_, top_menu, 
+	departament_translation_id, status_id, language_id, user_id)
+	VALUES (1, 1, 0, 1, 
+	1, 1, 'title', 
+	'description', 
+	'link_', true, 
+	1, 1, 1, 1),
+	(2, 1, 0, 1, 
+	1, 2, 'titleru', 
+	'description', 
+	'link_', true, 
+	1, 3, 2, 1);
+
+    INSERT INTO public.pages_20ts24tu(
+	id, title_short, title, description, text, status_id, "position", favorite, user_id)
+	VALUES (1,'title_short', 'title', 'description', 'text', 1, 1, true, 1);
+
+    INSERT INTO public.pages_translations_20ts24tu(
+	id, title_short, title, description, text, status_translation_id, "position", favorite, page_id, language_id, user_id)
+	VALUES (1, 'title_short', 'title', 'description', 'text', 1, 1, true, 1, 1, 1),
+	(2, 'title_short', 'titleru', 'description', 'text', 3, 4, true, 1, 2, 1);
+
+    INSERT INTO public.persons_20ts24tu(
+	id, "firstName", "lastName", fathers_name, email, 
+	gender_id, pinfl, passport_text, passport_number, 
+	status_id, departament_id, employee_type_id)
+	VALUES (1, 'firstName1', 'lastName1', 'fathers_name', 'email', 
+	1, 'pinfl', 'passport_text', 'passport_number', 
+	1, 1, 1);
+
+    INSERT INTO public.persons_translations_20ts24tu(
+	id, "firstName", "lastName", fathers_name, gender_id, 
+	persons_id, language_id, status_translation_id, departament_translation_id, 
+	employee_type_translation_id)
+	VALUES (1, 'firstNameen', 'lastNam', 'fathers_name', 1, 
+	1, 1, 1, 1, 
+	1),
+	(2, 'firstNameru', 'lastName', 'fathers_name', 3, 
+	1, 2, 3, 2, 
+	2);
+    INSERT INTO public.persons_data_20ts24tu(
+	id, persons_id, biography_json, birthday, degree, experience_year, 
+	phone_number1, phone_number2, orchid, scopus_id, address, languages_uz, 
+	languages_en, languages_ru, languages_any_title, languages_any, experience_json, 
+	scientific_activity_json, portfolio_json, blog_json, status_id)
+	VALUES (1, 1, 'biography_json', '12-12-2020', 1, 1, 
+	'phone_number1', 'phone_number2', 'orchid', 'scopus_id', 'address', 10, 
+	10, 10, 'languages_any_title', 10, 'experience_json', 
+	'scientific_activity_json', 'portfolio_json', 'blog_json', 1);
+
+    INSERT INTO public.persons_data_translations_20ts24tu(
+	id, persons_translation_id, persons_data_id, biography_json, birthday, degree,
+	experience_year, phone_number1, phone_number2, orchid, scopus_id, address, languages_uz, 
+	languages_en, languages_ru, languages_any_title, languages_any, experience_json, 
+	scientific_activity_json, portfolio_json, blog_json, language_id, status_translation_id)
+	VALUES (1, 1, 1, 'biography_json', '12-12-2020', 1,
+	10, 'phone_number1', 'phone_number2', 'orchid', 'scopus_id', 'address', 10, 
+	10, 10, 'languages_any_title', 10, 'experience_json', 
+	'scientific_activity_json', 'portfolio_json', 'blog_json', 1, 1),
+	(2, 2, 1, 'biography_jsonru', '12-12-2020', 1,
+	10, 'phone_number1', 'phone_number2', 'orchid', 'scopus_id', 'address', 10, 
+	10, 10, 'languages_any_title', 10, 'experience_json', 
+	'scientific_activity_json', 'portfolio_json', 'blog_json', 2, 3);
+
+    INSERT INTO public.site_types_20ts24tu(
+	id, type, status_id)
+	VALUES (1, 'ttype1', 1);
+
+    INSERT INTO public.site_types_translations_20ts24tu(
+	id, site_type_id, language_id, status_translation_id, type)
+	VALUES (1, 1, 1, 1, 'typeen'),
+	(2, 1, 2, 3, 'typeru');
+
+    INSERT INTO public.sites_20ts24tu(
+	id, title, description, status_id, site_type_id, user_id)
+	VALUES (1, 'title', 'description', 1, 1, 1);
+
+    INSERT INTO public.sites_translations_20ts24tu(
+	id, site_id, language_id, title, description, status_translation_id, site_type_translation_id, user_id)
+	VALUES (1, 1, 1, 'titleen', 'description', 1, 1, 1),
+	(2, 1, 2, 'titleru', 'description', 3, 2, 1);
+
+    INSERT INTO public.site_details_20ts24tu(
+	id, title, description, socials, 
+	details, site_id, status_id)
+	VALUES (1, 'title', 'description', 'socials', 
+	'details', 1, 1);
+
+    INSERT INTO public.site_details_translations_20ts24tu(
+	id, site_detail_id, language_id, title, description, 
+	socials, details, site_translation_id, status_translation_id)
+	VALUES (1, 1, 1, 'titleen', 'description', 
+	'socials', 'details', 1, 1),
+	(2, 1, 2, 'titleru', 'description', 
+	'socials', 'details', 2, 3);
+
+    INSERT INTO public.countries_translations_20ts24tu(
+	id, title, language_id, country_id, status_translation_id)
+	VALUES (1, 'title', 1, 1, 1),
+    (2, 'titleru', 2, 1, 3);
+
+    INSERT INTO public.territories_translations_20ts24tu(
+	id, language_id, territorie_id, title, country_translation_id, status_translation_id)
+	VALUES (1, 1, 8, 'titleen', 1, 1),
+	(2, 2, 8, 'titleru', 1, 3);
+
+    INSERT INTO public.districts_translations_20ts24tu(
+	id, language_id, district_id, territorie_translation_id, title, status_translation_id)
+	VALUES (1, 1, 1, 1, 'titleen', 1),
+	(2, 2, 1, 2, 'titleru', 3);
+
+INSERT INTO public.neighborhoods_translations_20ts24tu(
+	id, language_id, neighborhood_id, district_translation_id, title, status_translation_id)
+	VALUES (1, 1, 10, 1, 'titleen', 1),
+	(2, 2, 10, 2, 'titleru', 3);
+
+
