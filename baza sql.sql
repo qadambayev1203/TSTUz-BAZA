@@ -9542,4 +9542,8 @@ INSERT INTO public.neighborhoods_translations_20ts24tu(
 	VALUES (1, 1, 10, 1, 'titleen', 1),
 	(2, 2, 10, 2, 'titleru', 3);
 
+UPDATE public.users_20ts24tu
+	SET email='admin@gmail.com', person_id=1, status_id=1 WHERE id=1;
+UPDATE public.users_20ts24tu
+	SET email='user@gmail.com', person_id=1, status_id=1 WHERE id=2;
 
